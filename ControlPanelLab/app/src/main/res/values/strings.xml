@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Control Panel Lab</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="type_something">Type something...</string>
+    <string name="editText_hint">editText_hint</string>
+</resources>

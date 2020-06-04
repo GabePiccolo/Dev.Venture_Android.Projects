@@ -1,31 +1,39 @@
 package com.example.desafiodevventure.model;
 
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class Cats {
 
-    ArrayList< Object > data = new ArrayList < Object > ();
-    private boolean success;
-    private float status;
+    List<Object> data = new ArrayList<> ();
 
+    public Cats() {}
 
-    // Getter Methods
-
-    public boolean getSuccess() {
-        return success;
+    public Cats(List<Object> data) {
+        this.data = data;
     }
 
-    public float getStatus() {
-        return status;
+    public List<Object> getData() {
+        return data;
     }
 
-    // Setter Methods
-
-    public void setSuccess(boolean success) {
-        this.success = success;
+    public void setData(ArrayList<Object> data) {
+        this.data = data;
     }
 
-    public void setStatus(float status) {
-        this.status = status;
+    public class Object{
+
+        private String link;
+
+        public Object () {}
+
+        public String getLink() {
+            return link;
+        }
+
+        public void setLink(String link) {
+            this.link = link;
+        }
     }
 }

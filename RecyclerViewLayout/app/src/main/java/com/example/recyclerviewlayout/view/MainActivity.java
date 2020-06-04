@@ -1,4 +1,4 @@
-package com.example.recyclerviewlayout;
+package com.example.recyclerviewlayout.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,6 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.ImageView;
+
+import com.example.recyclerviewlayout.Contact;
+import com.example.recyclerviewlayout.ListAdapter;
+import com.example.recyclerviewlayout.R;
 
 import java.util.ArrayList;
 import java.util.List;

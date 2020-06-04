@@ -1,8 +1,10 @@
-package com.example.desafiodevventure;
+package com.example.desafiodevventure.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.desafiodevventure.R;
 
 public class MainActivity extends AppCompatActivity {
 

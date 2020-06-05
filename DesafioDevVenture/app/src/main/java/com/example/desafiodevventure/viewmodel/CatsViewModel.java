@@ -9,6 +9,9 @@ import com.example.desafiodevventure.retrofit.RetrofitConfig;
 import java.util.Random;
 
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.annotations.NonNull;
+import io.reactivex.rxjava3.core.Observer;
+import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.functions.Consumer;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
@@ -26,15 +29,26 @@ public class CatsViewModel extends ViewModel {
         retrofitConfig.getCatsAPI().getCatsPhoto(cats)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<Cats>() {
+                .subscribe(new Observer<Cats>() {
                     @Override
-                    public void accept(Cats cats) throws Throwable {
-                        Random random = new Random();
-                        int randomNumber = random.nextInt(cats.getData().size());
-                        String receivePhotoUrl = cats.getData().get(randomNumber).getLink();
-                        photoURL.setValue(receivePhotoUrl);
+                    public void onSubscribe(@NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(@NonNull Cats cats) {
+
+                    }
+
+                    @Override
+                    public void onError(@NonNull Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
                     }
                 });
     }
-
 }
